@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
-// import img from "../assets/img2.jpg";
+import img2 from '../assets/img2.jpg'
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -13,24 +13,24 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          {/* Profile Image Placeholder */}
-          {/* <motion.div
+          {/* Profile Image */}
+          <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 260, damping: 20 }}
-            className="mx-auto w-32 h-32 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg"
+            className="mx-auto w-32 h-32 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg overflow-hidden border-4 border-white dark:border-gray-800"
           >
-            KB
-          </motion.div> */}
+            <img src={img2} alt="Profile" className="w-full h-full object-cover" />
+          </motion.div>
 
           {/* Name and Title */}
           <div className="space-y-4">
@@ -133,7 +133,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            className="absolute -bottom-20 left-1/2 transform -translate-x-1/2"
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
@@ -149,6 +149,16 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
+      {/* Wavy SVG Divider */}
+      <svg className="wavy-divider absolute bottom-0 left-0" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="url(#wavy-gradient)" fillOpacity="1" d="M0,32L60,37.3C120,43,240,53,360,58.7C480,64,600,64,720,58.7C840,53,960,43,1080,42.7C1200,43,1320,53,1380,58.7L1440,64L1440,80L1380,80C1320,80,1200,80,1080,80C960,80,840,80,720,80C600,80,480,80,360,80C240,80,120,80,60,80L0,80Z" />
+        <defs>
+          <linearGradient id="wavy-gradient" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#6366f1" />
+            <stop offset="1" stopColor="#818cf8" />
+          </linearGradient>
+        </defs>
+      </svg>
     </section>
   );
 };
