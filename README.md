@@ -153,7 +153,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📞 Contact
 
-- **Email**: kevin.brinsly@email.com
+- **Email**: brinslykevin@gmail.com
 - **LinkedIn**: [Your LinkedIn Profile]
 - **GitHub**: [Your GitHub Profile]
 
